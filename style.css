@@ -1,0 +1,460 @@
+:root {
+  --header: rgba(255, 255, 255, 0.8);
+  --hoverFont: rgba(0, 133, 133, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #eee;
+  color: #1e1e1e;
+  font-family: 'Lora';
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header styling */
+header {
+  position: relative;
+  width: 100%;
+  background-color: var(--header);
+  height: 100px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  position: absolute;
+  font-family: 'Pacifico';
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  margin-left: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+nav {
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  background-color: var(--header);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+}
+
+nav li {
+  margin-bottom: 1rem;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #1e1e1e;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--hoverFont);
+}
+
+.nav-toggle {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+}
+
+.toggle {
+  display: none;
+}
+
+/* Display the hamburger menu bars (including top and bottom) */
+
+.hamburger {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.hamburger > div {
+  position: relative;
+  height: 5px;
+  width: 100%;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.hamburger > div::before, .hamburger > div::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  height: 5px;
+  width: 100%;
+  background: #1e1e1e;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+  top: 12px;
+}
+
+/* Effects when the checkbox gets checked
+      Make menu appear
+      Change button shape from burger to X*/
+
+.toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out 0.2s;
+}
+
+.toggle:checked ~ label > div > div{
+  background: #fff;
+}
+
+.toggle:checked ~ label > div > div::before{
+  transform: translateY(12px) rotate(135deg);
+}
+
+.toggle:checked ~ label > div > div::after{
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+/* Banner content starts here */
+.banner {
+  background: url(imgs/desk.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 100px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-shadow: 2px 2px 8px #1e1e1e;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.2rem;
+  padding: 0 25px 10px;
+}
+
+.banner h3 {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+
+.link-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-shadow: none;
+  background: rgba(238, 238, 238, 0.8);
+  padding: 5px 10px;
+  margin: 10px 0;
+  color: #2b2b2b;
+  border-radius: 50px;
+  box-shadow: 2px 2px 6px #1e1e1e;
+  font-weight: bold;
+}
+
+.link-btn:hover{
+  box-shadow: 0 0 5px inset #1e1e1e;
+  background: rgba(227, 227, 227, 0.8);
+}
+
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.icons a:hover {
+  color: #e3e3e3;
+}
+
+/* Skills table styling starts */
+
+.section-header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.skill-box {
+  background: #fff;
+  color: #555;
+  border: 1px solid #555;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 10px 15px 0 #000;
+}
+
+.skill-box .heading {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.skill-box li {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.skill-box li i {
+  font-size: 2rem;
+  color: #1d1d1d;
+}
+
+.skill-box li:nth-child(even){
+  background-color: #f4f4f4;
+}
+
+/* Project styling starts here */
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project img {
+  max-width: 80%;
+  margin: 20px;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+}
+
+.project p {
+  margin: 1rem 0;
+}
+
+.project .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project .link-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-shadow: none;
+  background: rgba(238, 238, 238, 0.8);
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #2b2b2b;
+  border-radius: 50px;
+  box-shadow: 2px 2px 6px #1e1e1e;
+  font-weight: bold;
+}
+
+.project .link-btn:hover{
+  box-shadow: 0 0 5px inset #1e1e1e;
+  background: rgba(227, 227, 227, 0.8);
+}
+
+
+
+/* Media query starts here to make responsive */
+
+@media only screen and (min-width: 500px) {
+  /* Banner and nav for tablet starts */
+  .banner h2 {
+    font-size: 2.6rem;
+    padding: 0 25px 10px;
+  }
+
+  .banner h3 {
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+  }
+
+  .link-btn {
+    font-size: 1.5rem;
+  }
+
+  .icons a {
+    font-size: 2.2rem;
+    margin: 0 30px;
+  }
+
+  /* Skills table for tablet starts */
+  .skill-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  /* Projects scaling for tablet starts */
+  .project .btns {
+    max-width: 70%;
+  }
+
+  .project h3 {
+    font-size: 1.6rem;
+  }
+
+  .project .link-btn{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* Banner and nav scaling starts */
+
+  .nav-toggle {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr minmax(250px, 2fr) minmax(500px, 3fr) 1fr;
+  }
+
+  .header-logo {
+    grid-column: 2 / span 1;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    position: absolute;
+    background: var(--hoverFont);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .banner h2 {
+    font-size: 3rem;
+    padding: 0 25px 10px;
+  }
+
+  .banner h3 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+
+  .link-btn {
+    font-size: 1.6rem;
+  }
+
+  .icons a {
+    font-size: 2.5rem;
+    margin: 0 30px;
+  }
+
+  /* Banner and nav scaling ends */
+
+  /* Scale skills table to larger screen */
+
+  .col {
+    width: 40%;
+  }
+
+  /* Project section scaling */
+  .project-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 2rem 0;
+  }
+
+    .project .btns {
+    max-width: 90%;
+  }
+
+  .project .link-btn {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+  }
+}
