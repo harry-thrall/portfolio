@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A front-end web designer and developer based in North Yorkshire, UK. Creating beautiful, bespoke and unique websites for both individuals or businesses">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lora|Open+Sans|Pacifico|Dancing+Script" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db9af42d68.js"></script>
+    <title>Harry Thrall - Front End Developer</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <a href="#" class="header-logo">Harry Thrall</a>
+        <input type="checkbox" class="toggle" id="checkbox">
+        <nav id="nav">
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php#projects">Projects</a></li>
+            <li><a href="index.php#about">About Me</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <label for="checkbox" class="nav-toggle">
+          <div class="hamburger"><div></div></div>
+        </label>
+      </header>
+      <main>
+        <section class="banner">
+          <div class="index-text">
+            <h2><span id="greeting">Hello</span>, I'm Harry.</h2>
+            <h3>A Front-end Web Developer.</h3>
+            <a href="files/harry thrall cv.pdf" target="_blank" class="link-btn">Click to view my CV</a>
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/harry-thrall/" target="_blank" class="fab fa-linkedin"></a>
+              <a href="https://github.com/harry-thrall" target="_blank" class="fab fa-github"></a>
+              <a href="https://codepen.io/HThrall/" target="_blank" class="fab fa-codepen"></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <div class="projects-wrapper">
+            <div class="image-wrapper">
+              <span class="banner-top"><p>The Locket (concept)</p></span>
+              <a href="https://thelocket.netlify.com/" target="_blank"><img src="imgs/locket0.jpg" alt=""></a>
+              <span class="banner-bottom"><a href="https://thelocket.netlify.com/"><p>HTML, CSS, JQuery <br><span class="banner-highlight">Click for more information</span></p></a></span>
+            </div>
+
+            <div class="image-wrapper">
+              <span class="banner-top"><p>Wedding Website</p></span>
+              <a href="weddingcountdownsample.netlify.com" target="_blank"><img src="imgs/wedding1.jpg" alt=""></a>
+              <span class="banner-bottom"><a href="wedding.php"><p>HTML, CSS, JQuery, PHP, MySQL, PDO <br><span class="banner-highlight">Click for more information</span></p></a></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="about">
+          <div class="about-me info-panel">
+            <h2 class="section-header"><span>About Me</span></h2>
+            <p>Hi my name is Harry Thrall, I am a front-end web developer, specialising in HTML, CSS and Javascript. <br><br> I graduated from the University of York in 2018 with a Master's Degree in Information Technology. With a strong knowledge of Java behind me I pushed myself to learn new skills and expand my programming knowledge. It was here my passion for web development began. I quickly realised how much I enjoyed taking my projects from a rough sketch in my notepad, to a fully fledged working website. For my larger projects such as the wedding website I organise my requirements using Trello which allows me to see what functionality I haave completed and what I still have to add. <br><br> I still have a lot to learn on this journey but I think with programming you never stop learning, be it new frameworks, new techniques or even new languages altogether but the ever changing nature is what makes this field so exciting.</p>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="contact-form info-panel">
+            <h2 class="section-header"><span>Reach out to me</span></h2>
+            <p>If you'd like to reach out to me you can drop me an email on <a href="mailto:contact@harry-thrall.com">contact@harry-thrall.com</a> and I'll get back to you as soon as possible.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+      <div class="copyright">
+      <h6>© 2020 Harry Thrall - Front-end Web Developer</h6>
+      </div>
+    </footer>
+  </body>
+</html>

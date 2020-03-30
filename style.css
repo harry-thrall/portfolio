@@ -223,7 +223,7 @@ nav a:hover {
 
 .image-wrapper img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   display: block;
 }
 
@@ -235,7 +235,7 @@ nav a:hover {
   text-align: center;
   background-color: #1e1e1e;
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
 .banner-bottom {
@@ -246,12 +246,12 @@ nav a:hover {
   text-align: center;
   background-color: #1e1e1e;
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
 .banner-top p, .banner-bottom p {
   color: #eee;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .banner-highlight {
@@ -274,56 +274,18 @@ nav a:hover {
     padding:0 10px;
 }
 
-.about-me p {
+.info-panel p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 1rem;
 }
 /* Main Page Styling Ends */
 
-
-
-/* Project Page Styling Start */
-.project-title {
-  margin: 2rem
-}
-
-
-/* Project Page Styling Ends */
-
-
-/* Media query starts here to make responsive */
-
-@media only screen and (min-width: 500px) {
-  /* Banner and nav for tablet starts */
-  .banner h2 {
-    font-size: 2.6rem;
-    padding: 0 25px 10px;
-  }
-
-  .banner h3 {
-    font-size: 1.6rem;
-    padding-bottom: 20px;
-  }
-
-  .link-btn {
-    font-size: 1.5rem;
-  }
-
-  .icons a {
-    font-size: 2.2rem;
-    margin: 0 30px;
-  }
-
-  /* Projects responsive styling */
-  .projects-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* About me responsive styling */
-  .about-me p {
-    padding: 1.4rem;
-  }
+/* Footer */
+footer {
+  text-align: right;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 @media only screen and (min-width: 900px) {
@@ -404,6 +366,18 @@ nav a:hover {
     font-size: 2.5rem;
     margin: 0 30px;
   }
+
+  .banner-top {
+    padding: 1rem;
+  }
+
+  .banner-bottom {
+    padding: 1rem;
+  }
+
+  .banner-top p, .banner-bottom p {
+    font-size: 1.2rem;
+  }
   /* Banner and nav scaling ends */
 
   /* Projects responsive styling */
@@ -420,8 +394,13 @@ nav a:hover {
     opacity: 1;
   }
 
+  .image-wrapper img {
+    height: 100%;
+  }
+
   /* About me responsive styling */
-  .about-me p {
+  .info-panel p {
     padding: 1.4rem 3rem;
+    font-size: 1.1rem;
   }
 }
