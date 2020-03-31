@@ -154,13 +154,21 @@ nav a:hover {
   background-position: center;
   height: calc(100vh - 100px);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   color: #fff;
   text-shadow: 2px 2px 8px #1e1e1e;
   text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner h2 {
@@ -175,20 +183,18 @@ nav a:hover {
 
 .link-btn {
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-shadow: none;
-  background: rgba(238, 238, 238, 0.8);
-  padding: 5px 10px;
+  background: rgba(87, 249, 233, 1);
+  padding: 5px 1rem;
   margin: 10px 0;
-  color: #2b2b2b;
+  color: #1e1e1e;
   border-radius: 50px;
-  box-shadow: 2px 2px 6px #1e1e1e;
   font-weight: bold;
 }
 
 .link-btn:hover{
-  box-shadow: 0 0 5px inset #1e1e1e;
-  background: rgba(227, 227, 227, 0.8);
+  background: rgba(87, 249, 233, 0.8);
 }
 
 .icons {
@@ -206,7 +212,7 @@ nav a:hover {
 }
 
 .icons a:hover {
-  color: #e3e3e3;
+  color: #CACACA;
 }
 
 /* Projects section starts */
@@ -269,15 +275,31 @@ nav a:hover {
   margin: 1rem;
 }
 
-.section-header span {
+.section-header span{
     background:#eee;
     padding:0 10px;
 }
 
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
 .info-panel p {
+  align-self: center;
   text-align: center;
+  width: 80%;
   font-size: 1rem;
   padding: 1rem;
+}
+
+.mail {
+  color: rgba(11, 173, 157, 1);
+}
+
+.mail:hover {
+  text-decoration: underline;
 }
 /* Main Page Styling Ends */
 
@@ -286,6 +308,17 @@ footer {
   text-align: right;
   font-size: 1rem;
   padding: 0.5rem 1rem;
+}
+
+@media only screen and (min-width: 600px){
+  /* Projects responsive styling */
+  .projects-wrapper {
+    margin: 0rem 2rem;
+  }
+
+  .image-wrapper img {
+    height: 100%;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -326,7 +359,7 @@ footer {
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 1;
     position: relative;
   }
@@ -335,8 +368,8 @@ footer {
     content: '';
     position: absolute;
     background: var(--hoverFont);
-    height: 2px;
-    bottom: 0;
+    height: 1.4px;
+    bottom: -4px;
     left: 0;
     right: 0;
     transform: scale(0, 1);
@@ -359,7 +392,7 @@ footer {
   }
 
   .link-btn {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .icons a {
@@ -394,13 +427,9 @@ footer {
     opacity: 1;
   }
 
-  .image-wrapper img {
-    height: 100%;
-  }
-
   /* About me responsive styling */
   .info-panel p {
-    padding: 1.4rem 3rem;
+    padding: 1.4rem 5rem;
     font-size: 1.1rem;
   }
 }
