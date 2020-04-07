@@ -155,14 +155,13 @@ nav a:hover {
   height: calc(100vh - 100px);
 
   color: #fff;
-  text-shadow: 2px 2px 8px #1e1e1e;
   text-align: center;
 
   margin-bottom: 2rem;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.42);
   height: 100%;
   width: 100%;
 
@@ -178,7 +177,7 @@ nav a:hover {
 
 .banner h3 {
   font-size: 1.2rem;
-  padding-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .link-btn {
@@ -186,8 +185,7 @@ nav a:hover {
   font-size: 1rem;
   text-shadow: none;
   background: rgba(87, 249, 233, 1);
-  padding: 5px 1rem;
-  margin: 10px 0;
+  padding: 10px 1.4rem;
   color: #1e1e1e;
   border-radius: 50px;
   font-weight: bold;
@@ -198,7 +196,7 @@ nav a:hover {
 }
 
 .icons {
-  margin-top: 20px;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,52 +215,74 @@ nav a:hover {
 
 /* Projects section starts */
 .projects-wrapper {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
 }
 
-.image-wrapper {
-  position: relative;
+.projects-wrapper:nth-of-type(2n+0) {
+  flex-direction: row-reverse;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  padding: 2rem;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  margin: 1rem 1rem 0;
+  font-size: 1.4rem;
+}
+
+.project-info ul {
+  display: flex;
+}
+
+.project-info ul li {
   margin: 1rem;
 }
 
-.image-wrapper img {
-  width: 100%;
-  height: 250px;
-  display: block;
+.project-info ul li span {
+  color: rgba(0, 103, 84, 1);
+  background: rgba(224, 224, 224, 1);
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
-.banner-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  text-align: center;
-  background-color: #1e1e1e;
-  width: 100%;
-  padding: 0.6rem;
+.project-info p {
+  font-size: 1.1rem;
+  margin: 1rem;
+  margin-bottom: 2rem;
 }
 
-.banner-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  text-align: center;
-  background-color: #1e1e1e;
-  width: 100%;
-  padding: 0.6rem;
+.links{
+  display: inline-block;
 }
 
-.banner-top p, .banner-bottom p {
+.project-btn {
+  cursor: pointer;
+  font-size: 1rem;
+  text-shadow: none;
+  background: rgba(0, 96, 80, 1);
+  padding: 10px 1.4rem;
   color: #eee;
-  font-size: 0.8rem;
+  border-radius: 50px;
+  margin: 1rem;
 }
 
-.banner-highlight {
-  font-style: italic;
-  text-decoration: underline;
+.project-btn:hover {
+  background: rgba(13, 109, 93, 0.8);
 }
 
 /* About me section styling starts */
@@ -295,7 +315,7 @@ nav a:hover {
 }
 
 .mail {
-  color: rgba(11, 173, 157, 1);
+  color: rgba(0, 122, 106, 1);
 }
 
 .mail:hover {
@@ -310,18 +330,8 @@ footer {
   padding: 0.5rem 1rem;
 }
 
-@media only screen and (min-width: 600px){
-  /* Projects responsive styling */
-  .projects-wrapper {
-    margin: 0rem 2rem;
-  }
 
-  .image-wrapper img {
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 950px) {
   /* Banner and nav scaling starts */
 
   .nav-toggle {
@@ -415,16 +425,8 @@ footer {
 
   /* Projects responsive styling */
   .projects-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .banner-top, .banner-bottom {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  .image-wrapper:hover .banner-top, .image-wrapper:hover .banner-bottom{
-    opacity: 1;
+    width: 80%;
+    flex-wrap: nowrap;
   }
 
   /* About me responsive styling */
