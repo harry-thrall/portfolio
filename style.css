@@ -328,10 +328,14 @@ nav a:hover {
 
 /* Footer */
 footer {
-  text-align: right;
+  text-align: center;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   background: rgba(224, 224, 224, 1);
+}
+
+footer h5 {
+  padding: 2rem;
 }
 
 
